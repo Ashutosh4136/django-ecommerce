@@ -1,0 +1,9 @@
+<h5>Status: {{ order.get_status_display }}</h5>
+
+{% if order.status == 'delivered' %}
+    <a href="{% url 'confirm_delivery' order.id %}" class="btn btn-success mt-3">
+        ✅ Confirm Delivery
+    </a>
+{% elif order.status == 'confirmed' %}
+    <p class="text-success mt-3">✔️ Delivery Confirmed on {{ order.confirmed_at|date:"M d, Y" }}</p>
+{% endif %}

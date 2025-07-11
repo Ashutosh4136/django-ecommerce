@@ -1,0 +1,35 @@
+{% extends "store/base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <h3>Checkout</h3>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <h5 class="mt-4">Order Summary</h5>
+        <ul class="list-group">
+            {% for item in products %}
+                <li class="list-group-item d-flex justify-content-between">
+                    {{ item.product.title }} (x{{ item.quantity }})
+                    <span>₹{{ item.product.price|floatformat:2 }}</span>
+                </li>
+            {% endfor %}
+            <li class="list-group-item d-flex justify-content-between fw-bold">
+                Total
+                <span>₹{{ total_price|floatformat:2 }}</span>
+            </li>
+        </ul>
+
+        <button type="submit" class="btn btn-success mt-3">Place Order</button>
+    </form>
+    <form method="post">
+  {% csrf_token %}
+  <input type="text" name="full_name" placeholder="Full Name" required><br>
+  <input type="text" name="phone" placeholder="Phone Number" required><br>
+  <textarea name="address" placeholder="Shipping Address" required></textarea><br>
+  <p>Total: ₹{{ total_price }}</p>
+  <button type="submit" class="btn btn-primary">Confirm Order</button>
+</form>
+
+</div>
+{% endblock %}

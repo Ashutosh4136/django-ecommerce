@@ -1,0 +1,54 @@
+{% extends "store/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+   <h3 class="mb-4">Your Cart</h3>
+
+   {% for item in cart_items %}
+     <div class="row border-bottom py-3 align-items-center">
+       
+       <!-- Product Image -->
+       <div class="col-md-2 col-4">
+         {% if item.product.image %}
+           <img src="{{ item.product.image.url }}" alt="{{ item.product.title }}" class="img-fluid rounded shadow-sm">
+         {% else %}
+           <img src="{% static 'store/no-image.png' %}" alt="No image" class="img-fluid rounded">
+         {% endif %}
+       </div>
+
+       <!-- Product Details -->
+       <div class="col-md-6 col-8">
+         <h5 class="fw-semibold">{{ item.product.title }}</h5>
+         <p class="text-success mb-1">In stock</p>
+         <span class="badge bg-warning text-dark">Fulfilled</span>
+
+         <!-- Quantity Controls -->
+         <div class="d-flex align-items-center mt-2">
+           <a href="{% url 'decrement_cart_item' item.product.id %}" class="btn btn-outline-secondary btn-sm me-2">−</a>
+           <span class="me-2">{{ item.quantity }}</span>
+           <a href="{% url 'increment_cart_item' item.product.id %}" class="btn btn-outline-secondary btn-sm">+</a>
+         </div>
+
+         <a href="{% url 'cart_delete' item.product.id %}" class="text-danger small mt-2 d-block">Delete</a>
+       </div>
+
+       <!-- Product Price -->
+       <div class="col-md-4 text-end">
+         <h5 class="fw-bold text-dark">₹{{ item.product.price }}</h5>
+       </div>
+     </div>
+   {% empty %}
+     <p class="text-muted">Your cart is empty.</p>
+   {% endfor %}
+
+   <!-- Cart Summary -->
+   {% if cart_items %}
+     <hr>
+     <div class="text-end">
+       <h5 class="fw-bold">Subtotal ({{ cart_items|length }} items): ₹{{ total_price }}</h5>
+       <a href="{% url 'checkout' %}" class="btn btn-warning btn-lg mt-2">Proceed to Buy</a>
+     </div>
+   {% endif %}
+</div>
+{% endblock %}

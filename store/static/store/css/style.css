@@ -1,0 +1,40 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.btn-get-started {
+  padding: 10px 25px;
+  background-color: #ffc107;
+  color: #000;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+}
+.btn-get-started:hover {
+  background-color: #e0a800;
+  color: #fff;
+}
+.product-detail img {
+  max-height: 400px;
+  object-fit: contain;
+}
+img.img-fluid:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+
