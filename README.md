@@ -91,18 +91,7 @@ Login with the superuser credentials you just created.
 - **Security:** Django Authentication, Sessions  
 - **Other:** Django Admin, Forms, Custom Middleware, Context Processor  
 
-## 🌐 Live Demo
 
-_(Optional: Add deployment link here if hosted on Render, Railway, etc.)_
-
-## 📸 Screenshots
-
-_(Replace these URLs with actual hosted screenshots if available)_
-
-- ![Home](https://via.placeholder.com/800x400.png?text=Home)
-- ![Products](https://via.placeholder.com/800x400.png?text=Products)
-- ![Cart](https://via.placeholder.com/800x400.png?text=Cart)
-- ![Checkout](https://via.placeholder.com/800x400.png?text=Checkout)
 
 ## 🤝 Contributing
 
@@ -111,9 +100,8 @@ Contributions are welcome! Feel free to fork this repository, make enhancements,
 ## 👨‍💻 Author
 
 **Ashutosh Rath**  
-📧 ashutoshrath.dev@example.com  
-🌐 [Portfolio](https://yourportfolio.com)  
-🐙 [GitHub](https://github.com/your-username)
+📧 rathashutosh11@gmail.com   
+🐙 [GitHub](https://github.com/Ashutosh4136)
 
 ## 📄 License
 
