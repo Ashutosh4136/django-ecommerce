@@ -2,11 +2,6 @@
 
 A professional and fully functional E-commerce web application built using Django and Bootstrap. It features user authentication, product management, shopping cart, coupon application, review and rating system, and a responsive UI for seamless online shopping.
 
-![Homepage Screenshot](https://via.placeholder.com/800x400.png?text=E-commerce+Home+Page)
-![Product Page Screenshot](https://via.placeholder.com/800x400.png?text=Product+Detail+Page)
-![Cart Page Screenshot](https://via.placeholder.com/800x400.png?text=Shopping+Cart)
-![Checkout Page Screenshot](https://via.placeholder.com/800x400.png?text=Checkout+Page)
-
 ## 🚀 Features
 
 - 🛍 Product Listing by Category  
