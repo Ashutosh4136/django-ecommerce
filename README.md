@@ -49,26 +49,32 @@ python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-### 3️⃣ Install the Dependencies
+### 3️⃣ (Optional) Create `requirements.txt` (if not present)
+
+```bash
+pip freeze > requirements.txt
+```
+
+### 4️⃣ Install the Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Apply Migrations
+### 5️⃣ Apply Migrations
 
 ```bash
 python manage.py makemigrations
 python manage.py migrate
 ```
 
-### 5️⃣ Create a Superuser
+### 6️⃣ Create a Superuser
 
 ```bash
 python manage.py createsuperuser
 ```
 
-### 6️⃣ Run the Development Server
+### 7️⃣ Run the Development Server
 
 ```bash
 python manage.py runserver
@@ -90,8 +96,6 @@ Login with the superuser credentials you just created.
 - **Database:** SQLite (can be upgraded to PostgreSQL/MySQL)  
 - **Security:** Django Authentication, Sessions  
 - **Other:** Django Admin, Forms, Custom Middleware, Context Processor  
-
-
 
 ## 🤝 Contributing
 
